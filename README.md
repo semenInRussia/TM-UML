@@ -2,16 +2,16 @@
 *Text Markup - Unified Modeling Language*
 ***
 # Install
-`
+```
 git clone https://github.com/semenInRussia/TM-UML
-`
+```
 # Get started
-Windows
+###### Windows
 ```
 git clone https://github.com/semenInRussia/TM-UML
 pip install -r requirements.txt
 ```
-Linux
+###### Linux
 ```
 git clone https://github.com/semenInRussia/TM-UML
 pip install -r requirements.txt
