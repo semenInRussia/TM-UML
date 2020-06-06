@@ -24,6 +24,10 @@ class TestParse(unittest.TestCase):
         data = parse_yaml_file(yaml_file_path)
         self.assertIsInstance(data, dict)
 
+    def test_not_file_error(self):
+        with self.assertRaises(FileNotFoundError):
+            parse_yaml_file('jjjjjjjhghbfgddfvjjj')
+
 
 class TestWrite(unittest.TestCase):
     def tearDown(self) -> None:
