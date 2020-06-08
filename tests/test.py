@@ -1,15 +1,12 @@
 import json
 import os
-import sys
-
 
 import unittest
 
 BASE_DIR: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 from syntax.functions import parse_yaml_file
-
+from syntax import exceptions
 
 class TestDecode(unittest.TestCase):
     def tearDown(self) -> None:
@@ -19,6 +16,7 @@ class TestDecode(unittest.TestCase):
 class TestParse(unittest.TestCase):
     yaml_file_path: str = os.path.join(BASE_DIR, 'tests', 'test_one_step.yml')
     json_file_path: str = os.path.join(BASE_DIR, 'tests', 'test_one_step.json')
+    yaml_not_valid_file_path: str = os.path.join(BASE_DIR, 'tests', 'not_valid.yml')
 
     def tearDown(self) -> None:
         pass
@@ -39,6 +37,10 @@ class TestParse(unittest.TestCase):
 
         self.assertEqual(valid_data, data)
 
+    def test_not_valid_content(self):
+        with self.assertRaises(exceptions.NotValidFileDataError):
+            data = parse_yaml_file(self.yaml_not_valid_file_path)
+        self.assertIsInstance(data, dict)
 
 class TestWrite(unittest.TestCase):
     def tearDown(self) -> None:
