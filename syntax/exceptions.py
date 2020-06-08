@@ -1,0 +1,2 @@
+class NotValidFileDataError(Exception):
+    pass

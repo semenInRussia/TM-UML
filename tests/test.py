@@ -39,8 +39,7 @@ class TestParse(unittest.TestCase):
 
     def test_not_valid_content(self):
         with self.assertRaises(exceptions.NotValidFileDataError):
-            data = parse_yaml_file(self.yaml_not_valid_file_path)
-        self.assertIsInstance(data, dict)
+            parse_yaml_file(self.yaml_not_valid_file_path)
 
 class TestWrite(unittest.TestCase):
     def tearDown(self) -> None:
