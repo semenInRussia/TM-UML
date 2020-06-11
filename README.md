@@ -21,7 +21,4 @@ pip install -r requirements.txt
 # About project
 We are use TDD.
 
-This is project outline.
-![My Uml Image](readme/UML-main.jpg)
-
 
