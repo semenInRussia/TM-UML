@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ```
 # Contacts
 * [trello](https://trello.com/b/JwrfZ6O5/)
-# About projects
+# About project
 We are use TDD.
 
 This is project outline.
